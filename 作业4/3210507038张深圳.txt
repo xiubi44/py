@@ -1,0 +1,38 @@
+#4.1
+count=0
+for i in range(1000, 10000):
+    a = str(i)
+    if a[0] == a[-1] and a[1] == a[-2]:
+        count+=1
+        print(i, end=" ")
+        if count%5==0:
+            print("", end='\n')
+
+
+#4.2
+s=input("请输入一段字符(空格分隔)：")
+s=s.replace(" ", "")
+m=len(s)
+for i in range(m):
+    print("{}".format(chr(ord("a")+(ord(s[i])-ord("a")+5)%26)),end=" ")
+
+
+#4.3
+n=eval(input ("n"))
+a,b=0,1
+for i in range(n-1):
+    a,b=b,a+b
+print(a)
+
+
+#4.4
+s=input("请输入中文字符串：")
+s=s.replace("，"," ")
+s=s.replace("。"," ")
+print(len(s))
+
+
+#4.5
+s=input("请输入:")
+s= s.center(20,"=")
+print(s)

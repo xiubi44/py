@@ -1,0 +1,7 @@
+x = input("请输入4个数字(空格分隔):")
+ls = x.split()
+x0 = eval(ls[0])
+y0 = eval(ls[1])
+x1 = eval(ls[2])
+y1 = eval(ls[3])
+print("{:.2f}".format(pow(pow(x1-x0, 2) + pow(y1-y0, 2), 0.5)))
