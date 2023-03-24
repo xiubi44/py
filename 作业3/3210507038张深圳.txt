@@ -1,0 +1,31 @@
+#1.
+s = eval(input("请输入一个数字："))
+ls = []
+for i in range(65, 91):
+    ls.append(chr(i))
+print("请输出字母：{}".format(ls[s-1]))
+
+
+#2.
+x = input("请输入4个数字(空格分隔):")
+ls = x.split()
+x0 = eval(ls[0])
+y0 = eval(ls[1])
+x1 = eval(ls[2])
+y1 = eval(ls[3])
+print("{:.2f}".format(pow(pow(x1-x0, 2) + pow(y1-y0, 2), 0.5)))
+
+
+#3.
+n=eval(input("请输入整数N："))
+sum=0
+for i in range(n):
+    sum+=i+1
+print("1到N求和的结果：{}".format(sum))
+
+
+#4.
+for i in range(1000, 10000):
+    a = str(i)
+    if a[0] == a[-1] and a[1] == a[-2]:
+        print(i)

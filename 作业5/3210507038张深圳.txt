@@ -1,0 +1,46 @@
+#1、求任意2个正整数的最大公约数和最小公倍数。
+x = input("请输入2个正整数(空格分隔):")
+ls = x.split()
+a = eval(ls[0])
+b = eval(ls[1])
+def c(a: int, b: int):
+    if b == 0:
+        return a
+    else:
+        return c(b, a % b)
+print("最小公倍数为:{}".format(c(a,b)))
+print("最大公约数为:{}".format(a*b/c(a,b)))
+
+
+#2、统计并输出任意字符串中不同字符（包括大小写字母、数字和其他字符）的个数。
+s = input("请输入一个字符串:")
+a = 0
+b = 0
+c = 0
+d = 0
+
+for i in s:
+    if i.isalpha():
+        a += 1
+    elif i.isdigit():
+        b += 1
+    elif i.isspace():
+        c += 1
+    else:
+        d += 1
+print("字母有{}个，数字有{}个，空格有{}个，其他字符有{}个。" .format(a, b, c, d))
+
+
+
+#3、用代码实现车羊门问题。
+from random import*
+a=b=0
+c=eval(input("请输入样本次数:"))
+for i in range(c):
+    m=randint(0,2)
+    n=randint(0,2)
+    if m!=n:
+        a+=1
+    else:
+        b+=1
+print("改变选择获胜的概率为：{}，不改变选择获胜的概率为{}".format(a/c,b/c))

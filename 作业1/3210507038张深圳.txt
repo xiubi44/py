@@ -1,0 +1,84 @@
+#1.
+import turtle as t
+n=eval(input ("n"))
+for i in range(n):
+     t.fd(100)
+     t.left(360/n)
+
+
+#2.
+
+from turtle import *
+setup(650,350,200,200)
+
+penup()
+fd(250)   #fd(250)
+pendown()
+pensize(25)
+pencolor("purple")
+seth(220)  #set(140)
+
+for i in range(4):
+    circle(-40,80)
+    circle(40,80)
+
+circle(-40,80/2)
+fd(40)
+circle(-16,180)
+fd(40*2/3)
+done()
+
+
+#3.
+import turtle as t
+for i in range (4):
+    t.fd(80)
+    t.rt(90)
+t.penup()
+t.goto(-160,0)
+t.pendown()
+for i in range (4):
+    t.fd(80)
+    t.rt(90)
+t.penup()
+t.goto(160,0)
+t.pendown()
+for i in range (4):
+    t.fd(80)
+    t.rt(90)
+t.penup()
+t.goto(-320,0)
+t.pendown()
+for i in range (4):
+    t.fd(80)
+    t.rt(90)
+t.penup()
+t.goto(320,0)
+t.pendown()
+for i in range (4):
+    t.fd(80)
+    t.rt(90)
+
+
+#4.
+from turtle import *
+pensize(15)
+pencolor("red")
+setup(650,350,200,200)
+seth(-45)
+forward(100)
+seth(45)
+fd(70)
+seth(0)
+fd(100)
+circle(30,180)
+fd(40)
+seth(-90)
+penup()
+fd(120)
+pendown()
+seth(0)
+fd(50)
+circle(30,180)
+
+

@@ -1,0 +1,66 @@
+#1.
+ls = ["鼠", "牛", "虎", "兔", "龙", "蛇", "马", "羊", "猴", "鸡", "狗", "猪"]
+# print(len(ls))
+n = eval(input("n="))
+print("{}".format(ls[(n - 4) % 12]))
+
+
+#2.
+print('请输入需要反向输出的字符串', end="：")
+b = input()
+d = "反向输出的字符串为："
+length = len(b)
+# print(length)
+for i in range(length + 1):
+    d = d + b[length - i: length - i + 1]
+print(d)
+
+
+#3.
+s=0;
+for i in range(6):
+    print("{:^15}".format(str(s)*(2*i-1)))
+    s+=1
+
+
+#4.
+for i in range(1,6):
+    print(' '*(5-i),end='')
+    print(str(i)*(2*i-1))
+
+
+#5.
+import turtle as t
+
+ls=[69,292,33,131,61,254]
+X_len=400
+Y_len=300
+x0=-200
+y0=-100
+
+t.penup()
+t.goto(x0,y0)
+t.pendown()
+
+t.fd(X_len)
+t.fd(-X_len)
+t.seth(90)
+t.fd(Y_len)
+
+
+for i in range(len(ls)):
+    t.color("red")
+    t.penup()
+    t.goto(x0+(i+1)*50,y0 )
+    t.seth(90)
+    t.pendown()
+    t.begin_fill()
+    t.pensize(1)
+    t.pencolor('red')
+    t.fd(ls[i])
+    t.seth(0)
+    t.fd(20)
+    t.seth(-90)
+    t.fd(ls[i])
+    t.end_fill()
+t.done()
